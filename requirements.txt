@@ -1,0 +1,7 @@
+jupyterlab
+ipykernel
+pyvista[jupyter]
+dash
+dash-vtk
+dash-bootstrap-components
+itkwidgets[lab]>=1.0a55

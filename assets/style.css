@@ -1,0 +1,22 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(16, 16, 16);
+}
+
+#upload-data {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    color: rgb(240, 240, 240);
+}
+
+#vtk-container {
+    height: 100%;
+    width: 100%;
+}
