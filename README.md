@@ -11,7 +11,6 @@ This repository contains a few demo notebooks for creating interactive 3D visual
 
 - [↗️ Dash VTK Example](./dash_demo.ipynb)
 
-
 ## Setup & Installation
 
 Install the Python requirements:
@@ -45,3 +44,48 @@ In addition to Jupyter notebook tools, many other 3D rendering software packages
 - [vedo](https://vedo.embl.es/)
 - [Viv](https://github.com/hms-dbmi/viv?tab=readme-ov-file)
 - [Vizarr](https://github.com/hms-dbmi/vizarr)
+
+## Which tool for which use case?
+
+### Features
+
+| Software | 3D+time | Multichannel | Large data | Volume rendering | Projections (mip) | Isosurface / meshes | Glyphs | Intuitive | Scriptable |
+|----------|-------- | ------------ | ---------- | ---------------- | ----------------- | ------------------- | ------ | --------- | ---------- |
+| Fiji Volume Viewer | - | - | - | ✅ | ✅ | - | - | ✅ | - |
+| Fiji 3D Viewer     | ✅ | ✅ | - | ✅ | - | ✅ | - | ✅ | - |
+| Napari             | ✅ | ✅ | ✔️ | ✔️ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| PyVista            | - | ✔️ | ✔️ | ✅ | - | ✅ | ✅ | ✔️ | ✅ |
+| Neuroglancer       | ✅ | ✅ | ✅ | ✔️ | ✔️ | ✅ | ✔️ | - | ✔️ |
+| Paraview           | ✅ | ✔️ | ✔️ | ✅ | - | ✅ | ✅ | - | ✔️ |
+
+✅ Yes ✔️ Sort of
+
+### Pros and cons
+
+**Fiji Volume Viewer**
+
+- ✅ Ideal for Fiji users
+- ✅ Good control over the 3D rendering
+- 🔴 No glyphs or overlays (masks, points, vectors...)
+- 🔴 4D (3D+time or multichannel) not supported (?)
+- 🔴 Not controllable programmatically
+
+**Napari**
+
+- ✅ Ideal for nD: 3D+time, multichannel
+- ✅ Ideal for overlays: masks, points, vectors...
+- ✅ Controllable programmatically
+- 🔴 No fine control over the transfer function
+
+**PyVista**
+
+- ✅ Ideal for reproducible visualizations in Python
+- ✅ Good control over the 3D rendering
+- ✅ Desktop or web-based
+- 🔴 Not as interactive as other tools
+
+**Neuroglancer**
+
+- ✅ Ideal for Zarr and large images
+- ✅ Visualizations can be shared simply with a URL
+- 🔴 Not as intuitive as other tools
