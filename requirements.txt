@@ -5,3 +5,4 @@ dash
 dash-vtk
 dash-bootstrap-components
 itkwidgets[lab]>=1.0a55
+matplotlib
